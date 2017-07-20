@@ -6,5 +6,6 @@ We are creating an open source digital toolkit, based on existing hardware and s
 
 ## Nightly images
 
-You can find our nightly images (x86 and ARM) [here](https://liquidinvestigations.org/images/nightly/).
+You can find our nightly images (x86 and ARM) [here](https://liquidinvestigations.org/images/nightly/).  
+
 You can find our project wiki [here](https://github.com/liquidinvestigations/liquidinvestigations/wiki).
