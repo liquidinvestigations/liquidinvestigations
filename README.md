@@ -1,13 +1,5 @@
 ## Welcome to Liquid Investigations!
 
-We are an NGO working together to enable secure and portable collaboration for investigative journalists worldwide.
+The ‘Liquid investigations’ project is a Google DNI funded project, driven by [CRJI.org], where coders and journalists work towards making investigative collaborations less burdensome and more secure.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/liquidinvestigations/liquidinvestigations/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+We are creating an open source digital toolkit, based on existing hardware and software. When fully developed, the kit will allow for distributed data search and sharing, annotations, wiki and chat. While the software can run on any server, focus will be placed on small and portable devices.
