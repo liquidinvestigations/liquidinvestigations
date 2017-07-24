@@ -1,0 +1,49 @@
+liquid_config:
+  liquid_hostname: liquidnode.liquid # defaults to liquidnode.liquid
+
+  admin_user: # a username for liquid-core
+    # NOTE: the admin user will be created with no password, and be required to change their password on first login
+    # NOTE: when the password is set, an account is also created for the following:
+    # - hoover
+    # - dokuwiki
+    # - plm
+    # the accounts created share the same password and username
+    name: admin # defaults to 'admin'
+
+  network:
+    wifi:
+      mode: hotspot | client | disabled # defaults to hotspot
+      hotspot:
+        ssid: liquid  # defaults to 'liquid'
+        password: chocolate   # defaults to 'chocolate'
+      client:
+        ssid: some_ssid # no default
+        password: some_password  # no default
+    dhcp:
+      # NOTE: only one of (server|client|static) can be selected
+      mode:  server | client | static  # defaults to server
+      server:
+        interface: wlan0 # defaults to wlan0
+        ip: 10.0.0.1 # defaults to 10.0.0.1
+        netmask: 255.255.255.0 # defaults to 255.255.255.0
+        dhcp_range: some_magic_dnsmasq_string? # defaults to 10.0.0.100-255
+        dns_enabled: true | false # defaults to true
+      client:
+        interface: eth0 # no default
+      static:
+        ip: 192.168.66.66  # no default
+        netmask: 255.255.255.0 # no default
+        gateway: 192.168.66.1 # no default
+        dns: 192.168.66.1 # no default
+        interface: eth0 # no default
+
+  ssh:
+    # NOTE: if enabled is set to true, we will allow ssh login for the 'liquid' user only.
+    # NOTE: the 'liquid' user will be a sudoer
+    enabled: true | false # defaults to false
+    # NOTE: these show up in /home/liquid/.ssh/authorized_keys
+    authorized_keys: # defaults to an empty list. unused if enabled: false
+      - key 1
+      - key 2
+      - key 3
+    port: 22 # defaults to 22
