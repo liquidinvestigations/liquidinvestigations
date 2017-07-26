@@ -1,52 +1,50 @@
-liquid_config:
-  liquid_hostname: liquidnode.liquid # defaults to liquidnode.liquid
+liquid_hostname: liquidnode.liquid # defaults to liquidnode.liquid
 
-  admin_user: # a username for liquid-core
-    # NOTE: the admin user will be created with no password, and be required to change their password on first login
-    # NOTE: when the password is set, an account is also created for the following:
-    # - hoover
-    # - dokuwiki
-    # - plm
-    # the accounts created share the same password and username
-    name: admin # defaults to 'admin'
+admin_user: # a username for liquid-core
+  # NOTE: the admin user will be created with no password, and be required to change their password on first login
+  # NOTE: when the password is set, an account is also created for the following:
+  # - hoover
+  # - dokuwiki
+  # the accounts created share the same password and username
+  name: admin # defaults to 'admin'
 
-  network:
-    lan:
-      interface: wlan0 # default wlan0
-      wifi:
-        ssid: foo
-        password: bar
-      mode: dhcp_server | static # default dhcp_server
-      dhcp_server:
-        ip: 10.0.0.1 # defaults to 10.0.0.1
-        netmask: 255.255.255.0 # defaults to 255.255.255.0
-        dhcp_range: some_magic_dnsmasq_string? # defaults to 10.0.0.100-255
-        dns_enabled: true | false # defaults to true
-      static:
-        ip: 192.168.66.66  # no default
-        netmask: 255.255.255.0 # no default
-        gateway: 192.168.66.1 # no default
-        dns: 192.168.66.1 # no default
+network:
+  lan:
+    interface: wlan0 # default wlan0
+    wifi:
+      ssid: foo
+      password: bar
+    mode: dhcp_server | static # default dhcp_server
+    dhcp_server:
+      ip: 10.0.0.1 # defaults to 10.0.0.1
+      netmask: 255.255.255.0 # defaults to 255.255.255.0
+      dhcp_range: some_magic_dnsmasq_string? # defaults to 10.0.0.100-255
+      dns_enabled: true | false # defaults to true
+    static:
+      ip: 192.168.66.66  # no default
+      netmask: 255.255.255.0 # no default
+      gateway: 192.168.66.1 # no default
+      dns: 192.168.66.1 # no default
 
-    wan:
-      interface: eth0 # no default
-      wifi:
-        ssid: foo
-        password: bar
-      mode: dhcp_client | static # no default
-      static:
-        ip: 192.168.66.66  # no default
-        netmask: 255.255.255.0 # no default
-        gateway: 192.168.66.1 # no default
-        dns_server: 192.168.66.1 # no default
+  wan:
+    interface: eth0 # no default
+    wifi:
+      ssid: foo
+      password: bar
+    mode: dhcp_client | static # no default
+    static:
+      ip: 192.168.66.66  # no default
+      netmask: 255.255.255.0 # no default
+      gateway: 192.168.66.1 # no default
+      dns_server: 192.168.66.1 # no default
 
-  ssh:
-    # NOTE: if enabled is set to true, we will allow ssh login for the 'liquid' user only.
-    # NOTE: the 'liquid' user will be a sudoer
-    enabled: true | false # defaults to false
-    # NOTE: these show up in /home/liquid/.ssh/authorized_keys
-    authorized_keys: # defaults to an empty list. unused if enabled: false
-      - key 1
-      - key 2
-      - key 3
-    port: 22 # defaults to 22
+ssh:
+  # NOTE: if enabled is set to true, we will allow ssh login for the 'liquid' user only.
+  # NOTE: the 'liquid' user will be a sudoer
+  enabled: true | false # defaults to false
+  # NOTE: these show up in /home/liquid/.ssh/authorized_keys
+  authorized_keys: # defaults to an empty list. unused if enabled: false
+    - key 1
+    - key 2
+    - key 3
+  port: 22 # defaults to 22
