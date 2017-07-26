@@ -11,31 +11,34 @@ liquid_config:
     name: admin # defaults to 'admin'
 
   network:
-    wifi:
-      mode: hotspot | client | disabled # defaults to hotspot
-      hotspot:
-        ssid: liquid  # defaults to 'liquid'
-        password: chocolate   # defaults to 'chocolate'
-      client:
-        ssid: some_ssid # no default
-        password: some_password  # no default
-    dhcp:
-      # NOTE: only one of (server|client|static) can be selected
-      mode:  server | client | static  # defaults to server
-      server:
-        interface: wlan0 # defaults to wlan0
+    lan:
+      interface: wlan0 # default wlan0
+      wifi:
+        ssid: foo
+        password: bar
+      mode: dhcp_server | static # default dhcp_server
+      dhcp_server:
         ip: 10.0.0.1 # defaults to 10.0.0.1
         netmask: 255.255.255.0 # defaults to 255.255.255.0
         dhcp_range: some_magic_dnsmasq_string? # defaults to 10.0.0.100-255
         dns_enabled: true | false # defaults to true
-      client:
-        interface: eth0 # no default
       static:
         ip: 192.168.66.66  # no default
         netmask: 255.255.255.0 # no default
         gateway: 192.168.66.1 # no default
         dns: 192.168.66.1 # no default
-        interface: eth0 # no default
+
+    wan:
+      interface: eth0 # no default
+      wifi:
+        ssid: foo
+        password: bar
+      mode: dhcp_client | static # no default
+      static:
+        ip: 192.168.66.66  # no default
+        netmask: 255.255.255.0 # no default
+        gateway: 192.168.66.1 # no default
+        dns_server: 192.168.66.1 # no default
 
   ssh:
     # NOTE: if enabled is set to true, we will allow ssh login for the 'liquid' user only.
