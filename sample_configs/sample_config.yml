@@ -9,34 +9,39 @@ admin_user: # a username for liquid-core
   name: admin # defaults to 'admin'
 
 network:
-  lan:
-    interface: wlan0 # default wlan0
-    wifi:
-      ssid: foo
-      password: bar
-    mode: dhcp_server | static # default dhcp_server
+  hotspot: # hotspot is always on (Primary node WiFi/'admin' hotspot interface)
+    ssid: foo
+    password: bar
     dhcp_server:
       ip: 10.0.0.1 # defaults to 10.0.0.1
       netmask: 255.255.255.0 # defaults to 255.255.255.0
       dhcp_range: some_magic_dnsmasq_string? # defaults to 10.0.0.100-255
-      dns_enabled: true | false # defaults to true
-    static:
-      ip: 192.168.66.66  # no default
-      netmask: 255.255.255.0 # no default
-      gateway: 192.168.66.1 # no default
-      dns: 192.168.66.1 # no default
-
-  wan:
-    interface: eth0 # no default
-    wifi:
-      ssid: foo
-      password: bar
-    mode: dhcp_client | static # no default
+  
+  lan: # for wired config of dhcp/dns server (Primary node)
+    interface: ethernet | none # no default
+    mode: dhcp_server | static # default to dhcp client
+    dhcp_server:
+      ip: 10.0.0.1 # defaults to 10.0.0.1
+      netmask: 255.255.255.0 # defaults to 255.255.255.0
+      dhcp_range: some_magic_dnsmasq_string? # defaults to 10.0.0.100-255
     static:
       ip: 192.168.66.66  # no default
       netmask: 255.255.255.0 # no default
       gateway: 192.168.66.1 # no default
       dns_server: 192.168.66.1 # no default
+      
+  wan: # (Secondary node config or connection to internet)
+    interface: ethernet | wifi | none # no default
+    wifi:
+      ssid: foo
+      password: bar
+    mode: dhcp_client | static # default to dhcp client
+    static:
+      ip: 192.168.66.66  # no default
+      netmask: 255.255.255.0 # no default
+      gateway: 192.168.66.1 # no default
+      dns_server: 192.168.66.1 # no default
+  
 
 ssh:
   # NOTE: if enabled is set to true, we will allow ssh login for the 'liquid' user only.
