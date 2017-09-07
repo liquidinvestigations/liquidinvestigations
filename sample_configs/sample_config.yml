@@ -1,39 +1,27 @@
-liquid_hostname: liquidnode.liquid # defaults to liquidnode.liquid
-
 network:
-  hotspot: # hotspot is always on (Primary node WiFi/'admin' hotspot interface)
-    ssid: foo
-    password: bar
-    dhcp_server:
-      ip: 10.0.0.1 # defaults to 10.0.0.1
-      netmask: 255.255.255.0 # defaults to 255.255.255.0
-      dhcp_range: some_magic_dnsmasq_string? # defaults to 10.0.0.100-255
-  
-  lan: # for wired config of dhcp/dns server (Primary node)
-    interface: ethernet | none # no default
-    mode: dhcp_server | static # default to dhcp client
-    dhcp_server:
-      ip: 10.0.0.1 # defaults to 10.0.0.1
-      netmask: 255.255.255.0 # defaults to 255.255.255.0
-      dhcp_range: some_magic_dnsmasq_string? # defaults to 10.0.0.100-255
-    static:
-      ip: 192.168.66.66  # no default
-      netmask: 255.255.255.0 # no default
-      gateway: 192.168.66.1 # no default
-      dns_server: 192.168.66.1 # no default
-      
-  wan: # (Secondary node config or connection to internet)
-    interface: ethernet | wifi | none # no default
-    wifi:
+  domain: liquidnode.liquid # defaults to liquidnode.liquid
+
+  lan: # downstream network. clients connect and expect dhcp+dns from us.
+    ip: 10.0.0.1 # defaults to 10.0.0.1
+    netmask: 255.255.255.0 # defaults to 255.255.255.0
+    dhcp_range: 10.0.0.100-255 # defaults to 10.0.0.100-255
+
+    hotspot: # hotspot is always on (Primary node WiFi/'admin' hotspot interface)
       ssid: foo
       password: bar
-    mode: dhcp_client | static # default to dhcp client
-    static:
+
+    eth: false # if true, eth0 will function as dhcp+dns server; defaults to false
+
+  wan: # upstream network. we expect dhcp server (or static config) and optionally routing to the Internet.
+    static: # if missing, configure using dhcp
       ip: 192.168.66.66  # no default
       netmask: 255.255.255.0 # no default
       gateway: 192.168.66.1 # no default
       dns_server: 192.168.66.1 # no default
-  
+
+    wifi: # list of networks to connect as client
+      - ssid1: pass1
+      - ssid2: pass2
 
 ssh:
   # NOTE: if enabled is set to true, we will allow ssh login for the 'liquid' user only.
