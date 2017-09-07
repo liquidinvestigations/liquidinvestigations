@@ -1,13 +1,5 @@
 liquid_hostname: liquidnode.liquid # defaults to liquidnode.liquid
 
-admin_user: # a username for liquid-core
-  # NOTE: the admin user will be created with no password, and be required to change their password on first login
-  # NOTE: when the password is set, an account is also created for the following:
-  # - hoover
-  # - dokuwiki
-  # the accounts created share the same password and username
-  name: admin # defaults to 'admin'
-
 network:
   hotspot: # hotspot is always on (Primary node WiFi/'admin' hotspot interface)
     ssid: foo
