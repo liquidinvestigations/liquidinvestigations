@@ -23,13 +23,13 @@ network:
       - ssid1: pass1
       - ssid2: pass2
 
-ssh:
-  # NOTE: if enabled is set to true, we will allow ssh login for the 'liquid' user only.
-  # NOTE: the 'liquid' user will be a sudoer
-  enabled: true | false # defaults to false
-  # NOTE: these show up in /home/liquid/.ssh/authorized_keys
-  authorized_keys: # defaults to an empty list. unused if enabled: false
-    - key 1
-    - key 2
-    - key 3
-  port: 22 # defaults to 22
+  ssh:
+    # NOTE: if enabled is set to true, we will allow ssh login for the 'liquid' user only.
+    # NOTE: the 'liquid' user will be a sudoer
+    enabled: true | false # defaults to false
+    # NOTE: these show up in /home/liquid/.ssh/authorized_keys
+    authorized_keys: # defaults to an empty list. unused if enabled: false
+      - key 1
+      - key 2
+      - key 3
+    port: 22 # defaults to 22
