@@ -19,9 +19,9 @@ network:
       gateway: 192.168.66.1 # no default
       dns_server: 192.168.66.1 # no default
 
-    wifi: # list of networks to connect as client
-      - username: user
-      - password: password
+    wifi: # single network to connect to as a client
+      ssid: ssid
+      password: password
 
   ssh:
     # NOTE: if enabled is set to true, we will allow ssh login for the 'liquid' user only.
