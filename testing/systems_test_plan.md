@@ -79,13 +79,17 @@ Testing of applications and application interoperability will be covered in the 
 
 ## Approach
 
-Automated test plans and test suites are to be written for the following components:
+Automated functional test plans and test suites are to be written for the following components:
   - Discovery
   - VPN
   - User Management
   - All other API endpoints
     - https://liquidinvestigations.docs.apiary.io/#
     - @Alex / @Gabi is apiary.io complete and up to date?
+
+Automated performance test plans and test suites are to be written for the following components:
+ - VPN (scalability/stress testing)
+ - Hoover Indexing (scalability/stress testing)
 
 Manual test plans and test suites are to be written for the following components
   - Single Sign-On (today)/OAuth2 (Q4)
@@ -96,6 +100,7 @@ Manual test plans and test suites are to be written for the following components
     - Front Page
     - Per-application Login Screens (from Facelift (http://sentre.de:6080/grain/pbnGyBP7g4Nk4eGcKPtttJ) #TODO: update with proper public link to facelift requirements when this document is complete)
 
+Test planning and test suite writing will be completed before the end of November, with testing to begin at the beginning of December.
 
 ## Item Pass/Fail Criteria
 
@@ -124,7 +129,7 @@ For each feature to be tested the following will be produced:
       - expected result
       - actual result
       - pass/fail
-    - For automated tests, these should be a well documented set of tests (preferably written in python). Docstrings should be used to describe the test actions and expected outcomes.
+    - For automated and performance tests, these should be a well documented set of tests (preferably written in python). Docstrings should be used to describe the test actions and expected outcomes.
 
 
   - Test Result Reports
@@ -143,6 +148,8 @@ For each feature to be tested the following will be produced:
 
 ## Staffing and Training Needs
 
-TBDiscussed with @Andreea
-
 We are constrained by resources and budget, and so the bulk of the testing work should be completed by the existing team. Boris has said that he may be available to help us this quarter, and it may also be possible to temporarily hire one or two manual testers to assist us.
+
+As we would like to begin testing for December 1st, it is important that all team members be involved in the test plan and test suite writing process.
+
+Details of work assignments will be discussed with @Andreea and the team this week. (Nov 6.)
