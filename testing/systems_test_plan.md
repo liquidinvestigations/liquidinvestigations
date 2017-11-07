@@ -19,9 +19,6 @@
 
   This testing phase will begin on December 1st, 2017, and complete in mid-January.
 
-  We are constrained by resources and budget, and so the bulk of the testing work should be completed by the existing team. Boris has said that he may be available to help us this quarter, and it may also be possible to temporarily hire one or two manual testers to assist us.
-
-
 ## Test Items
 All tests (manual and automated) are to be performed against the following configurations:
   - x86 (Cloud-based)
@@ -145,4 +142,7 @@ For each feature to be tested the following will be produced:
   - @Gabi / @Alex Please provide input here -- what do we have today that is not tied up with Jenkins work? @Andreea -- do you know what we have in Leipzig right now?
 
 ## Staffing and Training Needs
-  - TBDiscussed with @Andreea
+
+TBDiscussed with @Andreea
+
+We are constrained by resources and budget, and so the bulk of the testing work should be completed by the existing team. Boris has said that he may be available to help us this quarter, and it may also be possible to temporarily hire one or two manual testers to assist us.
