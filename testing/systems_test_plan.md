@@ -26,9 +26,9 @@ All tests (manual and automated) are to be performed against the following confi
   - x86 (NUC)
     - @Andreea please let me know what NUCs we have, where they are?
   - ARM (ODroid C2)
-    - @Alex / @Gabi please let me know if there's another target ARM architecture that awe want to test for.
+    - @Alex / @Gabi please let me know if there's another target ARM architecture that we want to test against.
 
-The images tested will all be built by the Jenkins build system. All test failures will be trackable back to a given build number in Jenkins. No formal testing will take place against ad-hoc or manual builds.
+The images tested will all be built by the Jenkins build system. (@Alex / @Gabi I would like to have a small discussion about whether these should be nightlies, weekly images, or something else? I guess we don't want to run the tests with every build that gets made.) All test failures will be trackable back to a given build number in Jenkins. No formal testing will take place against ad-hoc or manual builds.
 
 
 ## Software Risk Issues
@@ -52,7 +52,7 @@ The images tested will all be built by the Jenkins build system. All test failur
 ### Features to be Tested
 
   - Discovery
-  - Single Sign-On / OAuth2
+  - Single Sign-On / OAuth2 (@Alex / @Gabi please clarify here. I guess we will have OAuth2 in Q4, or no?)
   - Drag & Drop Indexing
   - VPN
   - User Management
@@ -82,8 +82,7 @@ Testing of applications and application interoperability will be covered in the 
 Automated functional test plans and test suites are to be written for the following components:
   - Discovery
   - VPN
-  - User Management
-  - All other API endpoints
+  - All API endpoints
     - https://liquidinvestigations.docs.apiary.io/#
     - @Alex / @Gabi is apiary.io complete and up to date?
 
@@ -109,7 +108,7 @@ We will consider an item to have 'passed' if its associated tests have a 100% pa
 
 ## Suspension Criteria/Resumption Requirements
 
-In case of build failures, all testing activities will be suspended while team efforts are focused on fixing the build process. Testing will resume once builds are running smoothly
+In case of build failures, all testing activities will be suspended while team efforts are focused on fixing the build. Testing will resume once builds are running smoothly
 
 In case of smoke test failures, all testing activities will be suspended while team efforts are focused on fixing the problems uncovered by the smoke test. Testing will resume once smoke tests are passing.
 
@@ -134,7 +133,7 @@ For each feature to be tested the following will be produced:
 
   - Test Result Reports
     - For manual tests, these can be a dated google sheet outlining the actual test results an a percentage of test successes
-    - For automated tests this
+    - For automated tests this should be in some format that can easily be consumed by Jenkins.
 
 
 ## Remaining Test Tasks
@@ -150,6 +149,6 @@ For each feature to be tested the following will be produced:
 
 We are constrained by resources and budget, and so the bulk of the testing work should be completed by the existing team. Boris has said that he may be available to help us this quarter, and it may also be possible to temporarily hire one or two manual testers to assist us.
 
-As we would like to begin testing for December 1st, it is important that all team members be involved in the test plan and test suite writing process.
+As we would like to begin testing for December 1st, it is important that all team members be involved in the test plan and test suite writing process before the end of November.
 
 Details of work assignments will be discussed with @Andreea and the team this week. (Nov 6.)
