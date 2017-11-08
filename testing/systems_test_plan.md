@@ -23,8 +23,9 @@
 All tests (manual and automated) are to be performed against the following configurations:
   - x86 (Cloud-based)
     - Will run in a virtual machine
-  - x86 (NUC)
-    - @Andreea please let me know what NUCs we have, where they are?
+    
+  - intel nuc i5 (NUC)
+ 
   - ARM (ODroid C2)
     - @Alex / @Gabi please let me know if there's another target ARM architecture that we want to test against.
 
