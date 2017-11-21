@@ -84,7 +84,6 @@ Automated functional test plans and test suites are to be written for the follow
   - VPN
   - All API endpoints
     - https://liquidinvestigations.docs.apiary.io/#
-    - @Alex / @Gabi is apiary.io complete and up to date?
 
 Automated performance test plans and test suites are to be written for the following components:
  - VPN (scalability/stress testing)
