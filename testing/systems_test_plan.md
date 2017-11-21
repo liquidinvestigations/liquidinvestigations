@@ -28,7 +28,7 @@ All tests (manual and automated) are to be performed against the following confi
  
   - ARM (ODroid C2)
 
-The images tested will all be built by the Jenkins build system. (@Alex / @Gabi I would like to have a small discussion about whether these should be nightlies, weekly images, or something else? I guess we don't want to run the tests with every build that gets made.) All test failures will be trackable back to a given build number in Jenkins. No formal testing will take place against ad-hoc or manual builds.
+The images tested will all be built by the Jenkins build system: [x86_64 cloud](https://jenkins.liquiddemo.org/job/liquidinvestigations/job/setup/job/master/lastSuccessfulBuild/artifact/), [arm64 odroid c2](https://jenkins.liquiddemo.org/job/setup-arm64/job/master/lastSuccessfulBuild/artifact/). (@Alex / @Gabi I would like to have a small discussion about whether these should be nightlies, weekly images, or something else? I guess we don't want to run the tests with every build that gets made. (@Nathan let's do weekly. The images are built after every push to master so they'll always be up to date.)) All test failures will be trackable back to a given build number in Jenkins. No formal testing will take place against ad-hoc or manual builds.
 
 
 ## Software Risk Issues
