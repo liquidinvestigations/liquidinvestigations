@@ -27,7 +27,6 @@ All tests (manual and automated) are to be performed against the following confi
   - intel nuc i5 (NUC)
  
   - ARM (ODroid C2)
-    - @Alex / @Gabi please let me know if there's another target ARM architecture that we want to test against.
 
 The images tested will all be built by the Jenkins build system. (@Alex / @Gabi I would like to have a small discussion about whether these should be nightlies, weekly images, or something else? I guess we don't want to run the tests with every build that gets made.) All test failures will be trackable back to a given build number in Jenkins. No formal testing will take place against ad-hoc or manual builds.
 
