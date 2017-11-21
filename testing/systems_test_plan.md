@@ -146,7 +146,7 @@ For each feature to be tested the following will be produced:
   - @Nathan will need some ARM boards.
   - @Nathan may need a NUC.
   - NOTE: a large number of the existing ARM boards are currently being used as build slaves/automated test runners. It may not be appropriate to use them for any other testing, and so we might need to buy more
-  - @Gabi / @Alex Please provide input here -- what do we have today that is not tied up with Jenkins work? @Andreea -- do you know what we have in Leipzig right now?
+  - @Gabi / @Alex Please provide input here -- what do we have today that is not tied up with Jenkins work? (We have 5 Odroid C2's in the office, one or two can always be used for testing. There's also one Intel NUC, currently idle, but I think we should do x86_64-cloud tests in a VM --alex) @Andreea -- do you know what we have in Leipzig right now?
 
 ## Staffing and Training Needs
 
